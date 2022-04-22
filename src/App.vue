@@ -1,8 +1,5 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <div id="app"></div>
 </template>
 
 <script>
@@ -14,6 +11,7 @@ export default {
   data() {
     return {
       apiUrl: "https://api.themoviedb.org/3/search/",
+      apiKey: "ead8f8d058a298ee674b1e140e34342f",
     };
   },
   mounted() {
