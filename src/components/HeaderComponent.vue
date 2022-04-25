@@ -3,7 +3,7 @@
     <h1>Boolflix</h1>
     <input type="text" v-model="query" />
     <button @click="searchEntries">Cerca!</button>
-    <h2>films</h2>
+    <h2>Films</h2>
     <div v-for="item in films" :key="item.id">
       {{ item.title }}
     </div>
@@ -16,13 +16,14 @@
 
 <script>
 import axios from "axios";
+import apiKey from "@/apikey";
 
 export default {
   name: "HeaderComponent",
   data() {
     return {
       apiUrl: "https://api.themoviedb.org/3/search/",
-      apiKey: "ead8f8d058a298ee674b1e140e34342f",
+      apiKey: apiKey,
       query: "",
       searching: false,
       films: [],
@@ -71,4 +72,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
